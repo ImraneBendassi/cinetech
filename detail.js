@@ -36,25 +36,3 @@ fetch(apiUrl)
   .catch(error => {
     console.error('Il y a eu un problème avec votre requête Fetch:', error);
   });
-
-  /* godzila kingkong */
-  
-
-fetch(apiUrl)
-  .then(response => response.json())
-  .then(data => {
-    const movie = data.results[0];
-    const cardDiv = document.getElementById('movieCard');
-    cardDiv.innerHTML = `
-      <h2>${movie.title}</h2>
-      <p>Date de sortie : ${movie.release_date}</p>
-      <p>Description : ${movie.overview}</p>
-      <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
-    `;
-  })
-  .catch(error => {
-    console.error('Erreur lors du chargement des données :', error);
-    const cardDiv = document.getElementById('movieCard');
-    cardDiv.innerHTML = `<p>Erreur lors du chargement des données</p>`;
-  });
-

@@ -2,3 +2,28 @@
     margin: 0%;
     padding: 0%;
 }
+.movie-card {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .movie-info {
+    flex: 1;
+  }
+  
+  .movie-image {
+    flex-shrink: 0;
+    margin-left: 20px;
+  }
+  
+  /* Styles facultatifs pour améliorer l'apparence */
+  .movie-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-image img {
+    width: 200px; /* Ajustez la largeur de l'image selon vos besoins */
+    height: auto;
+  }
+  
