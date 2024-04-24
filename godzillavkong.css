@@ -9,13 +9,15 @@ body{
 }
 
 .movie-card {
-    width: 300px;
     margin: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.movie-card img {
+    width: 200px;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
 }
 
 .movie-details {

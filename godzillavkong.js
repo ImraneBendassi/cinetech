@@ -15,15 +15,16 @@ function createMovieCard(movie) {
     const card = document.createElement('div');
     card.classList.add('movie-card');
 
-    const title = document.createElement('h2');
-    title.textContent = movie.title;
-
-    // Ajoutez un événement de clic à chaque carte
-    card.addEventListener('click', () => {
+    const image = document.createElement('img');
+    image.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+    image.alt = `Poster de ${movie.title}`;
+    
+    // Ajoutez un événement de clic à chaque image
+    image.addEventListener('click', () => {
         displayMovieDetails(movie);
     });
 
-    card.appendChild(title);
+    card.appendChild(image);
     return card;
 }
 
