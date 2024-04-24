@@ -57,3 +57,31 @@ async function displayMovies() {
 }
 
 window.onload = displayMovies;
+
+
+function displayMovieDetails(movie) {
+    const movieTitle = document.getElementById('movie-title');
+    const moviePoster = document.getElementById('movie-poster');
+    const movieOverview = document.getElementById('movie-overview');
+    const overlay = document.querySelector('.overlay'); // Sélectionne la superposition
+
+    movieTitle.textContent = movie.title;
+    moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+    movieOverview.textContent = movie.overview;
+
+    const detailsContainer = document.getElementById('movie-details');
+    detailsContainer.style.display = 'block';
+    overlay.style.display = 'block'; // Affiche la superposition lorsque les détails du film sont affichés
+
+    const closeButton = document.getElementById('close-btn');
+    closeButton.addEventListener('click', () => {
+        detailsContainer.style.display = 'none';
+        overlay.style.display = 'none'; // Cache la superposition lorsque les détails du film sont cachés
+    });
+}
+
+
+
+
+
+

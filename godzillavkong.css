@@ -1,6 +1,7 @@
 body{
     margin: 0%;
     padding: 0%;
+    background-color: black;
 }
 .container {
     display: flex;
@@ -11,6 +12,7 @@ body{
 .movie-card {
     margin: 20px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .movie-card img {
@@ -18,33 +20,72 @@ body{
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.movie-details {
-    display: none;
+.movie-card:hover {
+    transform: scale(1.05);
+}
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond sombre semi-transparent */
+    z-index: 999;
+    display: none;
+    backdrop-filter: blur(10px); /* Filtre flou */
+}
+
+/* Modifiez les styles existants et ajoutez-en de nouveaux */
+
+.movie-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
     padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    display: none;
 }
 
 .movie-details img {
-    max-width: 100%;
-    margin-bottom: 20px;
+    max-width: 300px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
 }
+
+.movie-details h2,
+.movie-details p {
+    color: white; /* Texte en blanc */
+    text-align: right; /* Texte centré à droite */
+}
+
+/* Modifiez les styles existants et ajoutez-en de nouveaux */
+
+.movie-details p {
+    margin-top: 10px; /* Ajoute une marge en haut de chaque paragraphe */
+    line-height: 1.5; /* Augmente l'espacement entre les lignes */
+}
+
+
+
+/* Boutons */
 
 #close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: transparent;
-    color: #fff;
+    background-color: green; /* Couleur de fond verte */
+    color: white; /* Texte en blanc */
     border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s ease; /* Effet de transition pour le mouvement */
 }
 
-/* Ajoutez d'autres styles selon vos besoins */
+#close-btn:hover {
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
