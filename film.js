@@ -29,11 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="content">
               <div class="name">${movie.original_title}</div>
               <div class="des">${movie.overview}</div>
-              <button>Button</button>
+              <button class="add-to-favorites-btn" data-movie="${movie.original_title}">Add to Favorites</button>
             </div>
           `;
           movieList.appendChild(listItem);
         }
+        
+        // Add event listeners for "Add to Favorites" buttons
+        const addToFavoritesButtons = document.querySelectorAll('.add-to-favorites-btn');
+        addToFavoritesButtons.forEach(button => {
+          button.addEventListener('click', onAddButtonClick);
+        });
       }
 
       function showNextMovie() {
@@ -56,4 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => {
       console.error('Error fetching data:', error);
     });
+
+  // Function to add movie to favorites
+  function onAddButtonClick(event) {
+    const movieName = event.target.dataset.movie;
+    // Add your favorite functionality here
+    localStorage.setItem('favouriteCard', movieName);
+    console.log('Added to favorites:', movieName);
+  }
 });
