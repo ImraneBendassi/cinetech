@@ -68,3 +68,33 @@ async function displayMovies() {
 }
 
 window.onload = displayMovies;
+
+async function displayMovieDetails(movie) {
+    console.log(movie); // Vérifier les données récupérées
+
+    const movieTitle = document.getElementById('movie-title');
+    const moviePoster = document.getElementById('movie-poster');
+    const movieOverview = document.getElementById('movie-overview');
+    const movieLanguage = document.getElementById('movie-language');
+    const movieReleaseDate = document.getElementById('movie-release-date');
+    const overlay = document.querySelector('.overlay');
+
+    movieTitle.textContent = `${movie.title}`;
+    moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+    movieLanguage.textContent = `Langue originale : ${movie.original_language.toUpperCase()}`;
+    movieReleaseDate.textContent = `Date de sortie : ${movie.release_date}`;
+    movieOverview.textContent = movie.overview;
+
+    const detailsContainer = document.getElementById('movie-details');
+    detailsContainer.classList.add('show'); // Ajoutez la classe pour afficher les détails
+    overlay.style.display = 'block';
+
+    const closeButton = document.getElementById('close-btn');
+    closeButton.addEventListener('click', () => {
+        detailsContainer.classList.remove('show'); // Retirez la classe pour masquer les détails
+        overlay.style.display = 'none';
+    });
+
+    console.log(`Titre du film : ${movie.title}, Langue originale : ${movie.original_language.toUpperCase()}, Date de sortie : ${movie.release_date}`);
+}
+

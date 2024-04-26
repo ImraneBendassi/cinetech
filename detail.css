@@ -1,8 +1,11 @@
-body{
+/* Ajoutez ces styles à votre fichier detail.css */
+
+body {
   margin: 0%;
   padding: 0%;
   background-color: black;
 }
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -12,7 +15,7 @@ body{
 .movie-card {
   margin: 20px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease; /* Augmentez la durée de la transition */
 }
 
 .movie-card img {
@@ -20,12 +23,13 @@ body{
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease; /* Augmentez la durée de la transition */
 }
 
 .movie-card:hover {
   transform: scale(1.05);
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -38,18 +42,21 @@ body{
   backdrop-filter: blur(10px); /* Filtre flou */
 }
 
-/* Modifiez les styles existants et ajoutez-en de nouveaux */
-
 .movie-details {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0); /* Ajoutez une échelle initiale de 0 */
   background-color: transparent;
   padding: 20px;
   border-radius: 8px;
   z-index: 1000;
-  display: none;
+  display: block;
+  transition: transform 0.5s ease; /* Ajoutez une transition pour la transformation */
+}
+
+.movie-details.show {
+  transform: translate(-50%, -50%) scale(1); /* Ajustez l'échelle pour afficher les détails */
 }
 
 .movie-details img {
@@ -70,12 +77,6 @@ body{
   text-align: center;
 }
 
-
-/* Ajoutez d'autres styles selon vos besoins */
-
-/* Boutons */
-/* Modifiez les styles existants et ajoutez-en de nouveaux */
-
 #close-btn {
   background-color: green; /* Couleur de fond verte */
   color: white; /* Texte en blanc */
@@ -89,8 +90,6 @@ body{
 #close-btn:hover {
   transform: scale(1.1); /* Effet de zoom au survol */
 }
-
-/* resposive */
 
 /* Pour les écrans de taille moyenne et plus grands */
 @media screen and (min-width: 768px) {
@@ -124,3 +123,7 @@ body{
   margin-top: 10px; /* Marge supérieure pour l'espacement */
 }
 
+#movie-release-date {
+  display: inline-block;
+  margin-left: 55px;
+}
