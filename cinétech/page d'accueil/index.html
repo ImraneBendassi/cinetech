@@ -8,43 +8,52 @@
     <title>Page D'accueil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">CINETECH</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Basculer la navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Films et Séries</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" tabindex="-1" aria-détails="true">Détails</a>
-                    </li>
-                </ul>
-                <!-- Centre le formulaire de recherche -->
-                <form class="d-flex mx-auto">
-                    <input class="form-control me-2" type="search" list="suggestions" placeholder="Rechercher" aria-label="Rechercher">
-                    <datalist id="suggestions"></datalist>
-                    <button class="btn btn-outline-success" type="submit">Rechercher</button>
-                </form>
-                <!-- Ajoute deux boutons sur la droite -->
-                <div class="navbar-nav ms-auto">
-                    <button class="btn btn-primary me-2" type="button">Se Connecter</button>
-                    <button class="btn btn-secondary" type="button">S'inscrire</button>
-                </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">CINETECH</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Basculer la navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Films et Séries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1" aria-détails="true">Favoris</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" tabindex="-1" aria-détails="true">Détails</a>
+              </li>
+            </ul>
+            <form class="d-flex mx-auto">
+                <input class="form-control me-2" type="search" list="suggestions" placeholder="Rechercher" aria-label="Rechercher">
+                <datalist id="suggestions"></datalist>
+                <button class="btn btn-outline-success" type="submit">Rechercher</button>
+            </form>
+            <!-- Ajoutez la classe 'btn-dark' aux boutons pour les rendre noirs -->
+            <div class="navbar-nav ms-auto">
+                <button class="btn btn-dark me-2" type="button">Se Connecter</button>
+                <button class="btn btn-dark" type="button">S'inscrire</button>
             </div>
         </div>
-    </nav>
+    </div>
+    <div class="button"></div>
+</nav>
+<br> <br>
+<div class="d-flex justify-content-end">
+  <button class="btn btn-dark me-2" type="button">Accueil</button>
+  <button class="btn btn-dark me-2" type="button">Films</button>
+  <button class="btn btn-dark me-2" type="button">Séries</button>
+</div>
+
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -56,4 +65,3 @@
 </body>
 
 </html>
-
