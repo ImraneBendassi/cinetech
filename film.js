@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
       let currentIndex = 0;
 
       function showMovie(index) {
-        // Clear the movie list before adding new items
+       
         movieList.innerHTML = '';
 
-        // Create and append new movie items
+      
         for (let i = 0; i < numMovies; i++) {
           const movie = movies[(index + i) % numMovies];
           const listItem = document.createElement('li');
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
           movieList.appendChild(listItem);
         }
         
-        // Add event listeners for "Add to Favorites" buttons
+       
         const addToFavoritesButtons = document.querySelectorAll('.add-to-favorites-btn');
         addToFavoritesButtons.forEach(button => {
           button.addEventListener('click', onAddButtonClick);
@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
         showMovie(currentIndex);
       }
 
-      // Show initial movie
+
       showMovie(currentIndex);
 
-      // Button event listeners
+   
       document.getElementById('next').addEventListener('click', showNextMovie);
       document.getElementById('prev').addEventListener('click', showPrevMovie);
     })  
@@ -63,11 +63,19 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Error fetching data:', error);
     });
 
-  // Function to add movie to favorites
-  function onAddButtonClick(event) {
-    const movieName = event.target.dataset.movie;
-    // Add your favorite functionality here
-    localStorage.setItem('favouriteCard', movieName);
-    console.log('Added to favorites:', movieName);
-  }
+ 
+function onAddButtonClick(event) {
+  const movieName = event.target.dataset.movie;
+
+ 
+  let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+  favorites.push(movieName);
+
+ 
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+
+  console.log('Added to favorites:', movieName);
+}
+
 });
