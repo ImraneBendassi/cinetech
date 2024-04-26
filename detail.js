@@ -95,6 +95,14 @@ async function displayMovieDetails(movie) {
         overlay.style.display = 'none';
     });
 
+    overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+            detailsContainer.classList.remove('show');
+            overlay.style.display = 'none';
+        }
+    });
+
     console.log(`Titre du film : ${movie.title}, Langue originale : ${movie.original_language.toUpperCase()}, Date de sortie : ${movie.release_date}`);
 }
+
 
