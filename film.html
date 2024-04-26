@@ -11,7 +11,7 @@
 <div class="container" id="slide">
     <ul id="movieList"></ul>
 </div>
-<button id="addToFavoritesBtn" class="favorite-button">Add to Favorites</button>
+<button class="add-to-favorites-btn" data-movie="${encodeURIComponent(JSON.stringify(movie))}">Add to Favorites</button>
 <div class="buttons">
     <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
     <button id="next"><i class="fa-solid fa-angle-right"></i></button>
