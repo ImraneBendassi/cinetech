@@ -75,17 +75,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   }
   
-  // Get the domain of the current page
-const currentDomain = window.location.hostname;
+// After updating localStorage with the new movie data
+// Trigger an event to notify the favorites page
+const event = new Event('favoriteAdded');
+document.dispatchEvent(event);
 
-// Compare with the domain of another page
-if (currentDomain === 'example.com') {
-    // Both pages are in the same domain
-    console.log('Pages are in the same domain.');
-} else {
-    // Pages are in different domains
-    console.log('Pages are in different domains.');
-}
 
   
 });
