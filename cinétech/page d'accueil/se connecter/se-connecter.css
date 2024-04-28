@@ -1,130 +1,144 @@
+/* Style pour la marque de la navbar */
 a.navbar-brand {
-    color: red !important;
+    color: red !important; /* Spécifie la couleur rouge pour le texte de la marque de la navbar */
 }
-/* Style pour rendre le formulaire carré */
+
+/* Style pour le formulaire carré */
+
 /* Style pour déplacer le formulaire de connexion plus bas sur la page */
 form.form {
-    width: 300px; /* Largeur du formulaire */
-    height: 300px; /* Hauteur du formulaire */
-    margin: 50px auto; /* Centrer le formulaire horizontalement et ajouter une marge supérieure */
+    width: 300px; /* Définit la largeur du formulaire */
+    height: 300px; /* Définit la hauteur du formulaire */
+    margin: 50px auto; /* Centre le formulaire horizontalement et ajoute une marge supérieure */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black; /* Bordure noire autour du formulaire */
+    border: 1px solid black; /* Ajoute une bordure noire autour du formulaire */
 }
 
-
+/* Style pour le formulaire */
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 0.4em;
-    background-color: #171717;
-    border-radius: 25px;
-    transition: .4s ease-in-out;
-  }
-  
-  .form:hover {
-    transform: scale(1.05);
-    border: 1px solid black;
-  }
-  
-  #heading {
-    text-align: center;
-    margin: 2em;
-    color: rgb(255, 255, 255);
-    font-size: 1.2em;
-  }
-  
-  .field {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    border-radius: 25px;
-    padding: 0.6em;
-    border: none;
-    outline: none;
-    color: white;
-    background-color: #171717;
-    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-  }
-  
-  .input-icon {
-    height: 1.3em;
-    width: 1.3em;
-    fill: white;
-  }
-  
-  .input-field {
-    background: none;
-    border: none;
-    outline: none;
-    width: 100%;
-    color: #d3d3d3;
-  }
-  
-  .form .btn {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 2.5em;
-  }
-  
-  .button1 {
-    padding: 0.5em;
-    padding-left: 1.1em;
-    padding-right: 1.1em;
-    border-radius: 5px;
-    margin-right: 0.5em;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: white;
-  }
-  
-  .button1:hover {
-    background-color: black;
-    color: white;
-  }
-  
-  .button2 {
-    padding: 0.5em;
-    padding-left: 2.3em;
-    padding-right: 2.3em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: white;
-  }
-  
-  .button2:hover {
-    background-color: black;
-    color: white;
-  }
-  
-  .button3 {
-    margin-bottom: 3em;
-    padding: 0.5em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: white;
-  }
-  
-  .button3:hover {
-    background-color: red;
-    color: white;
-  }
+    display: flex; /* Définit le formulaire en tant qu'élément flexible */
+    flex-direction: column; /* Aligne les éléments du formulaire en colonne */
+    gap: 10px; /* Ajoute un espace de 10px entre les éléments */
+    padding: 0 2em 0.4em; /* Ajoute un padding autour du formulaire */
+    background-color: #171717; /* Définit la couleur de fond du formulaire */
+    border-radius: 25px; /* Arrondit les coins du formulaire */
+    transition: .4s ease-in-out; /* Ajoute une transition lors du survol */
+}
 
-  body {
-    background-color: #171717;
-  }
+/* Effet de survol pour le formulaire */
+.form:hover {
+    transform: scale(1.05); /* Agrandit le formulaire lors du survol */
+    border: 1px solid black; /* Ajoute une bordure noire autour du formulaire */
+}
+
+/* Style pour le titre */
+#heading {
+    text-align: center; /* Centre le texte du titre */
+    margin: 2em; /* Ajoute une marge autour du titre */
+    color: rgb(255, 255, 255); /* Spécifie la couleur blanche pour le texte */
+    font-size: 1.2em; /* Définit la taille de police à 1.2em */
+}
+
+/* Style pour les champs du formulaire */
+.field {
+    display: flex; /* Définit le champ en tant qu'élément flexible */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 0.5em; /* Ajoute un espace de 0.5em entre les éléments */
+    border-radius: 25px; /* Arrondit les coins des champs */
+    padding: 0.6em; /* Ajoute un padding autour des champs */
+    border: none; /* Supprime les bordures par défaut */
+    outline: none; /* Supprime les bordures de focus par défaut */
+    color: white; /* Spécifie la couleur blanche pour le texte */
+    background-color: #171717; /* Définit la couleur de fond */
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5); /* Ajoute une ombre interne */
+}
+
+/* Style pour les icônes des champs */
+.input-icon {
+    height: 1.3em; /* Définit la hauteur des icônes */
+    width: 1.3em; /* Définit la largeur des icônes */
+    fill: white; /* Spécifie la couleur blanche pour les icônes */
+}
+
+/* Style pour les champs de saisie */
+.input-field {
+    background: none; /* Supprime l'arrière-plan */
+    border: none; /* Supprime les bordures */
+    outline: none; /* Supprime les bordures de focus par défaut */
+    width: 100%; /* Définit la largeur à 100% */
+    color: #d3d3d3; /* Définit la couleur de texte à #d3d3d3 */
+}
+
+/* Style pour les boutons du formulaire */
+.form .btn {
+    display: flex; /* Définit les boutons en tant qu'éléments flexibles */
+    justify-content: center; /* Centre les boutons horizontalement */
+    flex-direction: row; /* Aligne les boutons en rangée */
+    margin-top: 2.5em; /* Ajoute une marge supérieure */
+}
+
+/* Style pour le premier bouton */
+.button1 {
+    padding: 0.5em; /* Ajoute un padding autour du bouton */
+    padding-left: 1.1em; /* Ajoute un padding à gauche */
+    padding-right: 1.1em; /* Ajoute un padding à droite */
+    border-radius: 5px; /* Arrondit les coins du bouton */
+    margin-right: 0.5em; /* Ajoute une marge à droite */
+    border: none; /* Supprime les bordures */
+    outline: none; /* Supprime les bordures de focus */
+    transition: .4s ease-in-out; /* Ajoute une transition lors du survol */
+    background-color: #252525; /* Définit la couleur de fond */
+    color: white; /* Spécifie la couleur blanche pour le texte */
+}
+
+/* Effet de survol pour le premier bouton */
+.button1:hover {
+    background-color: black; /* Définit la couleur de fond lors du survol */
+    color: white; /* Spécifie la couleur blanche pour le texte */
+}
+
+/* Style pour le deuxième bouton */
+.button2 {
+    padding: 0.5em; /* Ajoute un padding autour du bouton */
+    padding-left: 2.3em; /* Ajoute un padding à gauche */
+    padding-right: 2.3em; /* Ajoute un padding à droite */
+    border-radius: 5px; /* Arrondit les coins du bouton */
+    border: none; /* Supprime les bordures */
+    outline: none; /* Supprime les bordures de focus */
+    transition: .4s ease-in-out; /* Ajoute une transition lors du survol */
+    background-color: #252525; /* Définit la couleur de fond */
+    color: white; /* Spécifie la couleur blanche pour le texte */
+}
+
+/* Effet de survol pour le deuxième bouton */
+.button2:hover {
+    background-color: black; /* Définit la couleur de fond lors du survol */
+    color: white; /* Spécifie la couleur blanche pour le texte */
+}
+
+/* Style pour le troisième bouton */
+.button3 {
+    margin-bottom: 3em; /* Ajoute une marge inférieure */
+    padding: 0.5em; /* Ajoute un padding autour du bouton */
+    border-radius: 5px; /* Arrondit les coins du bouton */
+    border: none; /* Supprime les bordures */
+    outline: none; /* Supprime les bordures de focus */
+    transition: .4s ease-in-out; /* Ajoute une transition lors du survol */
+    background-color: #252525; /* Définit la couleur de fond */
+    color: white; /* Spécifie la couleur blanche pour le texte */
+}
+
+/* Effet de survol pour le troisième bouton */
+.button3:hover {
+    background-color: red; /* Définit la couleur de fond lors du survol */
+    color: white; /* Spécifie la couleur blanche pour le texte */
+}
+
+/* Style pour le corps de la page */
+body {
+    background-color: #171717; /* Définit la couleur de fond */
+}
