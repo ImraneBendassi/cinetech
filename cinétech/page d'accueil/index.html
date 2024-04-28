@@ -25,13 +25,13 @@
                     <a class="nav-link active" aria-current="page" href="#">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Films et Séries</a>
+                    <a class="nav-link" href="file:///C:/Users/b13im/Downloads/film.html">Films et Séries</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-détails="true">Favoris</a>
+                    <a class="nav-link" href="file:///C:/Users/b13im/Downloads/favorites.html" tabindex="-1" aria-détails="true">Favoris</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" tabindex="-1" aria-détails="true">Détails</a>
+                  <a class="nav-link" href="file:///C:/Users/b13im/Downloads/detail.html" tabindex="-1" aria-détails="true">Détails</a>
               </li>
             </ul>
             <form class="d-flex mx-auto">
@@ -40,8 +40,8 @@
                 <button class="btn btn-outline-success" type="submit">Rechercher</button>
             </form>
             <div class="navbar-nav ms-auto">
-                <button class="btn btn-dark me-2" type="button">Se Connecter</button>
-                <button class="btn btn-dark" type="button">S'inscrire</button>
+                <button class="btn btn-dark me-2" type="button"  onclick="window.location.href='se-connecter.html'"">Se Connecter</button>
+                <button class="btn btn-dark" type="button"       onclick="window.location.href='sinscrire.html'"">S'inscrire</button>
             </div>
         </div>
     </div>
@@ -49,9 +49,9 @@
 </nav>
 <br> <br>
 <div class="d-flex justify-content-end">
-  <button class="btn btn-dark me-2" type="button">Accueil</button>
-  <button class="btn btn-dark me-2" type="button">Films</button>
-  <button class="btn btn-dark me-2" type="button">Séries</button>
+  <button class="btn btn-dark me-2" type="button" onclick="window.location.href='index.html'">Accueil</button>
+  <button class="btn btn-dark me-2" type="button" onclick="window.location.href='film.html'">Films</button>
+  <button class="btn btn-dark me-2" type="button" onclick="window.location.href='film.html'">Séries</button>
 </div>
 
 <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
@@ -60,7 +60,7 @@
         <img src="C:\Users\b13im\Downloads\One-Piece-Anime-define-data-de-lancamento-de-Egghead-Arc-com-novo-trailer-e-poster.png" class="d-block w-100" alt="..." width="800" height="450">
       </div>
       <div class="carousel-item">
-        <img src="C:\Users\b13im\Downloads\maxresdefault (1).png" class="d-block w-100" alt="..." width="800" height="450">
+        <img src="C:\Users\b13im\Downloads\quanto-incassando-civil-war-come-andando-film-alex-garland-v5-712887.png" class="d-block w-100" alt="..." width="800" height="450">
       </div>
       <div class="carousel-item">
         <img src="C:\Users\b13im\Downloads\Kung-Fu-Panda-4.png" class="d-block w-100" alt="..." width="800" height="450">
@@ -78,8 +78,45 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
+  <br> <br>
+  <button class="btn btn-dark me-2" type="button" >Les mieux notés</button>
   
+
+ <!-- Créez une div conteneur avec d-flex pour aligner les cartes en ligne -->
+ <div class="d-flex justify-content-center">
+    <!-- Carte 1 -->
+    <div class="card" style="width: 18rem; margin-right: 10px;">
+        <img src="C:\Users\b13im\Downloads\maxresdefault (1).png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Une course effrénée à travers une Amérique fracturée qui, dans un futur proche, est plus que jamais sur le fil du rasoir.</p>
+        </div>
+    </div>
+
+    <!-- Carte 2 -->
+    <div class="card" style="width: 18rem; margin-right: 10px;">
+        <img src="C:\Users\b13im\Downloads\f4a1a-16880641275679-1920.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Dans DUNE : DEUXIÈME PARTIE, Paul Atreides s’unit à Chani et aux Fremen pour mener la révolte contre ceux qui ont anéanti sa famille. Hanté par de sombres prémonitions, il se trouve confronté au plus grand des dilemmes : choisir entre l’amour de sa vie et le destin de l’univers.</p>
+        </div>
+    </div>
+
+    <!-- Carte 3 -->
+    <div class="card" style="width: 18rem; margin-right: 10px;">
+        <img src="C:\Users\b13im\Downloads\Kung-Fu-Panda-4.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Après trois aventures dans lesquelles le guerrier dragon Po a combattu les maîtres du mal les plus redoutables grâce à un courage et des compétences en arts martiaux inégalés, le destin va de nouveau frapper à sa porte pour… L’inviter à enfin se reposer. Plus précisément, pour être nommé chef spirituel de la vallée de la Paix. Cela pose quelques problèmes évidents.</p>
+        </div>
+    </div>
+
+    <!-- Carte 4 -->
+    <div class="card" style="width: 18rem; margin-right: 10px;">
+        <img src="C:\Users\b13im\Downloads\share.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Cassandra Web est une ambulancière de Manhattan qui serait capable de voir dans le futur. Forcée de faire face à des révélations sur son passé, elle noue une relation avec trois jeunes femmes destinées à un avenir hors du commun... si toutefois elles parviennent à survivre à un présent mortel.</p>
+        </div>
+    </div>
+</div>
+
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -88,6 +125,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+        
 </body>
 
 </html>
