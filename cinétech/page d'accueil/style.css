@@ -1,3 +1,34 @@
+/* Personnalisation de la marque de la barre de navigation */
 a.navbar-brand {
-    color: red !important;
+    color: red !important; /* Change la couleur de la marque en rouge */
+}
+
+/* Style général du corps de la page */
+body {
+    background-color: black; /* Définit la couleur de fond du corps de la page en noir */
+}
+
+/* Ajustements pour le carrousel d'images */
+.carousel {
+    width: 80%; /* Réduit la taille du conteneur du carrousel à 80% de la largeur totale */
+    margin: 0 auto; /* Centre le carrousel dans la page */
+    max-width: 800px; /* Limite la largeur du carrousel à 800 pixels */
+}
+
+/* Ajustements pour les images du carrousel */
+.carousel img {
+    height: 300px; /* Définit la hauteur des images à 300 pixels */
+    width: 100%; /* Maintient la largeur des images à 100% du conteneur */
+    object-fit: cover; /* Utilise 'cover' pour que l'image recouvre entièrement l'espace alloué */
+}
+
+/* Style pour les cartes */
+.card {
+    background-color: black; /* Définit la couleur de fond des cartes en noir */
+    border: 1px solid white; /* Ajoute une bordure blanche autour des cartes */
+}
+
+/* Style pour le texte dans les cartes */
+.card-body p {
+    color: white; /* Définit la couleur du texte dans les cartes en blanc */
 }
