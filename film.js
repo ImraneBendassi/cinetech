@@ -53,10 +53,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
       document.getElementById('next').addEventListener('click', showNextMovie);
       document.getElementById('prev').addEventListener('click', showPrevMovie);
-    })  
+
+      // Extract movie titles for autocomplete
+      const movieTitles = movies.map(movie => movie.original_title);
+      const searchInput = document.querySelector('.form-control');
+
+      // Add autocomplete functionality to the search input
+      searchInput.addEventListener('input', function(event) {
+        const userInput = event.target.value.toLowerCase();
+        const suggestions = movieTitles.filter(title => title.toLowerCase().includes(userInput));
+        updateSuggestions(suggestions);
+      });
+    })
     .catch(error => {
       console.error('Error fetching data:', error);
     });
+
+    function updateSuggestions(suggestions) {
+      const datalist = document.getElementById('suggestions');
+      datalist.innerHTML = ''; // Clear previous suggestions
+      suggestions.forEach(suggestion => {
+        const option = document.createElement('option');
+        option.value = suggestion;
+        datalist.appendChild(option);
+      });
+    }
+    
+
+    
+
 
     function onAddButtonClick(event) {
       const movieData = event.target.dataset.movie;
@@ -74,9 +99,10 @@ document.addEventListener('DOMContentLoaded', function() {
           console.error('Error parsing movie data:', error);
       }
   }
+
+
   
-// After updating localStorage with the new movie data
-// Trigger an event to notify the favorites page
+
 const event = new Event('favoriteAdded');
 document.dispatchEvent(event);
 
