@@ -64,22 +64,56 @@ document.addEventListener('DOMContentLoaded', function() {
         const suggestions = movieTitles.filter(title => title.toLowerCase().includes(userInput));
         updateSuggestions(suggestions);
       });
+
+      // Add submit event listener to the search form
+      const searchForm = document.querySelector('form');
+      searchForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const userInput = searchInput.value.trim().toLowerCase(); // Get user input
+        const matchedMovie = movies.find(movie => movie.original_title.toLowerCase() === userInput);
+
+        if (matchedMovie) {
+          // Clear previous suggestions
+          updateSuggestions([]);
+          // Clear search input
+          searchInput.value = '';
+          // Clear movie list
+          movieList.innerHTML = '';
+          
+          // Create elements to display the movie name and information
+          const movieInfo = document.createElement('div');
+          movieInfo.classList.add('movie-info');
+          movieInfo.innerHTML = `
+            <br> <br>
+            <div class="name" style="color: black;">${matchedMovie.original_title}</div> <br>
+            <div class="des" style="color: black;">${matchedMovie.overview}</div>
+          `;
+          
+          // Display matched movie
+          const listItem = document.createElement('li');
+          listItem.classList.add('item');
+          listItem.style.backgroundImage = `url(https://image.tmdb.org/t/p/original${matchedMovie.poster_path})`;
+          listItem.appendChild(movieInfo);
+          movieList.appendChild(listItem);
+        } else {
+          alert('Movie not found!');
+        }
+      });
     })
     .catch(error => {
       console.error('Error fetching data:', error);
     });
 
-    function updateSuggestions(suggestions) {
-      const datalist = document.getElementById('suggestions');
-      datalist.innerHTML = ''; // Clear previous suggestions
-      suggestions.forEach(suggestion => {
-        const option = document.createElement('option');
-        option.value = suggestion;
-        datalist.appendChild(option);
-      });
-    }
-    
-
+  function updateSuggestions(suggestions) {
+    const datalist = document.getElementById('suggestions');
+    datalist.innerHTML = ''; // Clear previous suggestions
+    suggestions.forEach(suggestion => {
+      const option = document.createElement('option');
+      option.value = suggestion;
+      datalist.appendChild(option);
+    });
+  }
     
 
 
