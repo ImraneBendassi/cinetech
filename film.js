@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="content">
               <div class="name">${movie.original_title}</div>
               <div class="des">${movie.overview}</div>
-              <button class="add-to-favorites-btn" data-movie='${encodeURIComponent(JSON.stringify(movie))}'>Add to Favorites</button>
+              <button class="add-to-favorites-btn" data-movie='${encodeURIComponent(JSON.stringify(movie))}'>Ajouter aux favoris</button>
             </div>
           `;
           movieList.appendChild(listItem);
