@@ -80,6 +80,13 @@ document.addEventListener('DOMContentLoaded', function() {
 const event = new Event('favoriteAdded');
 document.dispatchEvent(event);
 
+if (currentDomain === 'example.com') {
+  // Both pages are in the same domain
+  console.log('Pages are in the same domain.');
+} else {
+  // Pages are in different domains
+  console.log('Pages are in different domains.');
+}
 
   
 });

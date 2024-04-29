@@ -140,3 +140,24 @@ body{
 body {
 margin-top: 90px; /* Adjust margin-top to avoid content being hidden behind the fixed navbar */
 }  
+
+a.navbar-brand {
+    color: red !important; /* Change la couleur de la marque en rouge */
+    z-index: 6;
+}
+
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    z-index: 6;
+}
+
+.bg-dark {
+    background-color: #212529 !important;
+}

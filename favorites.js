@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
       name.textContent = movieData.original_title;
       des.textContent = movieData.overview;
       
+
+      
+      
       // Append elements to list item
       listItem.appendChild(img);
       listItem.appendChild(name);
