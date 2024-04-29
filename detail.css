@@ -1,0 +1,143 @@
+/* Ajoutez ces styles à votre fichier detail.css */
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-card {
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.5s ease; /* Augmentez la durée de la transition */
+}
+
+.movie-card img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease; /* Augmentez la durée de la transition */
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond sombre semi-transparent */
+  z-index: 999;
+  display: none;
+  backdrop-filter: blur(10px); /* Filtre flou */
+}
+
+.movie-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /* Ajoutez une échelle initiale de 0 */
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  display: block;
+  transition: transform 0.5s ease; /* Ajoutez une transition pour la transformation */
+}
+
+.movie-details.show {
+  transform: translate(-50%, -50%) scale(1); /* Ajustez l'échelle pour afficher les détails */
+}
+
+.movie-details img {
+  max-width: 300px;
+  height: auto;
+  float: left;
+  margin-right: 20px;
+}
+
+.movie-details h2,
+.movie-details p {
+  color: white; /* Texte en blanc */
+  text-align: right; /* Texte centré à droite */
+}
+
+.movie-details p {
+  margin-top: 110px;
+  text-align: center;
+}
+
+#close-btn {
+  background-color: green; /* Couleur de fond verte */
+  color: white; /* Texte en blanc */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Effet de transition pour le mouvement */
+}
+
+#close-btn:hover {
+  transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+/* Pour les écrans de taille moyenne et plus grands */
+@media screen and (min-width: 768px) {
+  .container {
+      justify-content: space-around; /* Répartit les éléments de manière égale */
+  }
+}
+
+/* Pour les écrans plus petits */
+@media screen and (max-width: 767px) {
+  .container {
+      justify-content: center; /* Centre les éléments */
+  }
+
+  .movie-card {
+      margin: 10px; /* Réduit la marge entre les cartes */
+  }
+
+  .movie-card img {
+      width: 150px; /* Réduit la taille des images */
+  }
+
+  .movie-details {
+      width: 90%; /* Réduit la largeur des détails du film */
+  }
+}
+
+#movie-release-date {
+  color: white; /* Texte en blanc */
+  text-align: right; /* Texte aligné à droite */
+  margin-top: 10px; /* Marge supérieure pour l'espacement */
+}
+
+#movie-release-date {
+  display: inline-block;
+  margin-left: 55px;
+}
+
+
+
+/* NAVBAR */
+
+a.navbar-brand {
+  color: red !important; /* Change la couleur de la marque en rouge */
+}
+
+/* back ground */
+.black-background {
+  background-color: black;
+  color: white; /* Pour changer la couleur du texte en blanc pour une meilleure lisibilité */
+}
