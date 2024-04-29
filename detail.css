@@ -127,3 +127,17 @@ body {
   display: inline-block;
   margin-left: 55px;
 }
+
+
+
+/* NAVBAR */
+
+a.navbar-brand {
+  color: red !important; /* Change la couleur de la marque en rouge */
+}
+
+/* back ground */
+.black-background {
+  background-color: black;
+  color: white; /* Pour changer la couleur du texte en blanc pour une meilleure lisibilité */
+}
